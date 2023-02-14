@@ -11,7 +11,8 @@ import RPC from "./web3RPC";
 import "./App.css";
 import { OpenloginAdapter } from "@web3auth/openlogin-adapter";
 
-const clientId = "YOUR_WEB3AUTH_CLIENT_ID"; // get from https://dashboard.web3auth.io
+const clientId =
+  "BBP_6GOu3EJGGws9yd8wY_xFT0jZIWmiLMpqrEMx36jlM61K9XRnNLnnvEtGpF-RhXJDGMJjL-I-wTi13RcBBOo"; // get from https://dashboard.web3auth.io
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 function App() {
