@@ -9,6 +9,7 @@ import {
 } from "@web3auth/base";
 import RPC from "./web3RPC";
 import "./App.css";
+import { OpenloginAdapter } from "@web3auth/openlogin-adapter";
 
 const clientId = "YOUR_WEB3AUTH_CLIENT_ID"; // get from https://dashboard.web3auth.io
 
@@ -32,6 +33,12 @@ function App() {
           },
         });
 
+        const openloginAdapter = new OpenloginAdapter({
+          loginSettings: {
+            mfaLevel: "optional", // Pass on the mfa level of your choice: default, optional, mandatory, none
+          },
+        });
+        web3auth.configureAdapter(openloginAdapter);
         setWeb3auth(web3auth);
 
         await web3auth.initModal();
